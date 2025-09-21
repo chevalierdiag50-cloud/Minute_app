@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #0056b3;
-    --dark-color: #2c3e50;
-    --light-color: #f8f9fa; /* Un gris très légèrement plus doux */
+    /* NOUVELLE PALETTE DE COULEURS INSPIRÉE DU LOGO */
+    --primary-green: #0E6E3A; /* Vert foncé du logo */
+    --accent-red: #D81920;    /* Rouge vif du logo */
+    --dark-color: #2c3e50;    /* Conservé pour le texte et les fonds sombres */
+    --light-bg: #f8f9fa;      /* Fond clair et propre */
     --text-color: #333;
     --container-width: 1100px;
 }
@@ -33,10 +34,10 @@ header {
     color: var(--dark-color);
     padding: 1rem 0;
     text-align: center;
-    position: sticky; /* Rendre le header collant */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-bottom: 1px solid #eee;
 }
 
@@ -49,7 +50,7 @@ header .container {
 header .logo {
     margin: 0;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--primary-green); /* MODIFIÉ : Logo en vert */
 }
 
 header nav ul {
@@ -68,13 +69,13 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--primary-color);
+    color: var(--primary-green); /* MODIFIÉ : Hover en vert */
 }
 
 
 /* Hero Section */
 #hero {
-    background: var(--light-color);
+    background: var(--light-bg);
     padding: 4rem 0;
     text-align: center;
 }
@@ -112,22 +113,20 @@ header nav a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease; /* Transition pour le zoom */
+    transition: transform 0.3s ease;
 }
 
 #hero img:hover {
-    transform: scale(1.03); /* Effet de zoom */
+    transform: scale(1.03);
 }
 
 /* General Section Styling */
 section {
     padding: 5rem 0;
-    /* Animation d'apparition */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-/* Classe pour activer l'animation quand visible */
 section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -141,12 +140,11 @@ section.visible {
     color: var(--dark-color);
 }
 
-/* Style pour le sous-titre des sections */
 .subtitle {
     text-align: center;
     font-size: 1.2rem;
     max-width: 700px;
-    margin: -2rem auto 0 auto; /* Remonte un peu le texte pour un meilleur équilibre */
+    margin: -2rem auto 0 auto;
     color: #555;
 }
 
@@ -175,7 +173,7 @@ section.visible {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--primary-color); /* Couleur des icônes */
+    color: var(--primary-green); /* MODIFIÉ : Icônes en vert */
 }
 
 .feature-card h4 {
@@ -185,7 +183,7 @@ section.visible {
 
 /* How It Works Section */
 #how-it-works {
-    background: var(--light-color);
+    background: var(--light-bg);
 }
 
 .steps {
@@ -201,7 +199,7 @@ section.visible {
     height: 60px;
     line-height: 60px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: var(--accent-red); /* MODIFIÉ : Numéros en rouge pour l'accent */
     color: #fff;
     font-size: 1.8rem;
     font-weight: 600;
